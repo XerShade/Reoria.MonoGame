@@ -9,5 +9,7 @@
     <Import_RootNamespace>Reoria.Engine.Core</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyInjection\DependencyInjectionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyInjection\Interfaces\IDependencyInjectionService.cs" />
   </ItemGroup>
 </Project>
