@@ -1,0 +1,3 @@
+[submodule "Source/Reoria.Client.Assets"]
+	path = Source/Reoria.Client.Assets
+	url = git@github.com:XerShade/Reoria.Client.Assets.git
