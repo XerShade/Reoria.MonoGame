@@ -10,14 +10,6 @@ using IGraphicsDeviceService = Reoria.Client.Core.Services.Interfaces.IGraphicsD
 
 namespace Reoria.Client.Core;
 
-/**
- * Well that is the goals for this stream done. Next up is making all that code down there thats still tightly coupled
- * into proper lifecycle code that runs on its own, from a lifecycle service or something that handles that. BootStrapping
- * is going to be needed for that as the game can't inject things into itself for loops and other things. I'll go mock that up
- * on my mind map but for now we can access all monogame objects we need outside of the game class without embedding or injecting
- * the actual game class. See everyone next time!
- */
-
 public class Game1 : Game
 {
     protected virtual IDependencyInjectionService DependencyInjection { get; private set; } = default!;
