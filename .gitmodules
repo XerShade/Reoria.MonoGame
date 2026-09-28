@@ -1,3 +1,4 @@
 [submodule "Source/Reoria.Client.Assets"]
 	path = Source/Reoria.Client.Assets
 	url = git@github.com:XerShade/Reoria.Client.Assets.git
+	branch = 0.1.0.MonoGame
