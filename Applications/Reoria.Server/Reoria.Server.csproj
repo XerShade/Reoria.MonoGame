@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>../..</DockerfileContext>
+    <StartupObject>Reoria.Server.Program</StartupObject>
+    <DefineConstants>$(DefineConstants);SERVER;</DefineConstants>
+  </PropertyGroup>
+  
+  <Import Project="../../Build/Reoria.Common.props" />
+  <Import Project="../../Build/Reoria.Engine.DependencyInjection.props" />
+  <Import Project="../../Build/MonoGame.Server.props" />
+  <Import Project="../../Build/LiteNetLib.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <MonoGameContentBuilderTaskEnabled>false</MonoGameContentBuilderTaskEnabled>
+    <NoWarn>CS0618</NoWarn>
+  </PropertyGroup>
+
+</Project>

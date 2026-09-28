@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Applications/">
     <Project Path="Applications/Reoria.Client.Desktop/Reoria.Client.Desktop.csproj" Id="f4c425ee-aae3-4953-a8e6-27b4b81678d9" />
+    <Project Path="Applications/Reoria.Server/Reoria.Server.csproj" Id="b00816e4-5cdd-4288-a87d-b14173ab5387" />
   </Folder>
   <Folder Name="/Source/">
     <Project Path="Source/Reoria.Client.Assets/Reoria.Client.Assets.shproj" Id="c7a644e4-fedf-42da-a30e-4795c9fb82d5" />
