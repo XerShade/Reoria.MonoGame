@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <ApplicationId>com.xershade.reoria.client.android</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>0.1.0</ApplicationDisplayVersion>
+    <NoWarn>XA0101;CS0618</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <Import Project="../../Build/Reoria.Common.props" />
+  <Import Project="../../Build/Reoria.Engine.DependencyInjection.props" />
+  <Import Project="../../Build/MonoGame.props" />
+  <Import Project="../../Build/LiteNetLib.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Gum.MonoGame" Version="2026.6.20.1" />
+    <PackageReference Include="MonoGame.Framework.Android" Version="3.8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="**\testhost.exe" />
+    <None Remove="**\testhost.dll" />
+    <None Remove="**\appsettings.json" />
+    <None Remove="**\libCoverageInstrumentationMethod.so" />
+    <None Remove="**\libInstrumentationEngine.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidAsset Include="$(SolutionDir)\**\appsettings*.json" Exclude="$(SolutionDir)\**\Bin\**;$(SolutionDir)\**\obj\**;$(SolutionDir)\**\.git\**">
+        <Link>Assets\%(Filename)%(Extension)</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
+
+  <Import Project="..\..\Source\Reoria.Client.Core\Reoria.Client.Core.projitems" Label="Shared" />
+  <Import Project="..\..\Source\Reoria.Engine.Core\Reoria.Engine.Core.projitems" Label="Shared" />
+  <Import Project="..\..\Source\Reoria.Client.Assets\Reoria.Client.Assets.projitems" Label="Shared" />
+
+</Project>

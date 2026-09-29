@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>Reoria.Client.Windows.Program</StartupObject>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+  </PropertyGroup>
+
+  <Import Project="../../Build/Reoria.Common.props" />
+  <Import Project="../../Build/Reoria.Engine.DependencyInjection.props" />
+  <Import Project="../../Build/MonoGame.props" />
+  <Import Project="../../Build/LiteNetLib.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Gum.MonoGame" Version="2026.6.20.1" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.*" />
+  </ItemGroup>
+
+  <Import Project="..\..\Source\Reoria.Client.Core\Reoria.Client.Core.projitems" Label="Shared" />
+  <Import Project="..\..\Source\Reoria.Engine.Core\Reoria.Engine.Core.projitems" Label="Shared" />
+  <Import Project="..\..\Source\Reoria.Client.Assets\Reoria.Client.Assets.projitems" Label="Shared" />
+</Project>

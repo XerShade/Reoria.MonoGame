@@ -7,6 +7,9 @@ using Reoria.Client.Core.Services.Interfaces;
 using Reoria.Engine.Core.DependencyInjection;
 using Reoria.Engine.Core.DependencyInjection.Interfaces;
 using IGraphicsDeviceService = Reoria.Client.Core.Services.Interfaces.IGraphicsDeviceService;
+using ButtonState = Microsoft.Xna.Framework.Input.ButtonState;
+using Color = Microsoft.Xna.Framework.Color;
+using Keys = Microsoft.Xna.Framework.Input.Keys;
 
 namespace Reoria.Client.Core;
 

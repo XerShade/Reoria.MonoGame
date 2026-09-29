@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using IGraphicsDeviceService = Reoria.Client.Core.Services.Interfaces.IGraphicsDeviceService;
+using Color = Microsoft.Xna.Framework.Color;
 
 namespace Reoria.Client.Core.Services;
 
